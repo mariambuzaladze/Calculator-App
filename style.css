@@ -24,3 +24,7 @@ h1 {
   letter-spacing: -0.53px;
   color: #fff;
 }
+
+.theme-div {
+  display: flex;
+}
