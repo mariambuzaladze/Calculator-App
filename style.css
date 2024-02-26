@@ -13,11 +13,14 @@ body {
   padding: 30px 24px 31px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 35px;
 }
 
 header {
   display: flex;
+  gap: 130px;
   justify-content: space-between;
 }
 
