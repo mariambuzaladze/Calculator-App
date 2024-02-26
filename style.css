@@ -63,3 +63,9 @@ h1 {
   background-color: #d03f2f;
   border-radius: 20px;
 }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
