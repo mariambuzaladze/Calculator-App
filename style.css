@@ -27,4 +27,39 @@ h1 {
 
 .theme-div {
   display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.theme-numbers {
+  display: flex;
+  justify-content: space-around;
+}
+
+.theme-text {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.theme-switch {
+  width: 71px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: #242d44;
+  padding: 5px;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: #d03f2f;
+  border-radius: 20px;
 }
