@@ -84,9 +84,18 @@ main {
 .output {
   width: 327px;
   height: 88px;
-  padding: 25px;
+  padding: 40px 32px 36px 32px;
   border-radius: 10px;
   background-color: #181f33;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.active .output-text {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: -0.93px;
+  color: #fff;
 }
 
 .input {
