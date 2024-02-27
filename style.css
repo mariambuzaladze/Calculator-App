@@ -59,6 +59,7 @@ h1 {
   border-radius: 13px;
   background-color: #242d44;
   padding: 5px;
+  display: flex;
 }
 
 .circle {
@@ -161,6 +162,113 @@ button:hover {
 
 .equals:hover {
   background-color: #f96b5b;
+}
+
+.theme-two {
+  background-color: #e6e6e6;
+}
+
+.theme-two .text {
+  color: #36362c;
+}
+
+.theme-two .output {
+  background-color: #eeeeee;
+}
+
+.theme-two .input {
+  background-color: #d2cdcd;
+}
+
+.theme-two .delete {
+  background-color: #378187;
+}
+
+.theme-two .delete:hover {
+  box-shadow: inset 0 -4px 0 0 #1b6066;
+  background-color: #62b5bc;
+}
+
+.theme-two .reset {
+  background-color: #378187;
+}
+
+.theme-two .reset:hover {
+  box-shadow: inset 0 -4px 0 0 #1b6066;
+  background-color: #62b5bc;
+}
+
+.theme-two .equals {
+  background-color: #c85402;
+}
+
+.theme-two .equals:hover {
+  box-shadow: inset 0 -4px 0 0 #873901;
+  background-color: #ff8a38;
+}
+
+.theme-two .theme-switch {
+  background-color: #d2cdcd;
+}
+
+.theme-three {
+  background-color: #17062a;
+}
+
+.theme-three .text {
+  color: #ffe53d;
+}
+
+.theme-three .output {
+  background-color: #1e0936;
+}
+
+.theme-three .input {
+  background-color: #1e0936;
+}
+
+.theme-three button {
+  box-shadow: inset 0 -4px 0 0 #881c9e;
+  background-color: #331c4d;
+}
+
+.theme-three button:hover {
+  box-shadow: inset 0 -4px 0 0 #881c9e;
+  background-color: #6c34ac;
+}
+
+.theme-three .delete {
+  box-shadow: inset 0 -4px 0 0 #be15f4;
+  background-color: #56077c;
+}
+
+.theme-three .delete:hover {
+  box-shadow: inset 0 -4px 0 0 #be15f4;
+  background-color: #8631af;
+}
+
+.theme-three .reset {
+  box-shadow: inset 0 -4px 0 0 #be15f4;
+  background-color: #56077c;
+}
+
+.theme-three .reset:hover {
+  box-shadow: inset 0 -4px 0 0 #be15f4;
+  background-color: #8631af;
+}
+
+.theme-three .equals {
+  box-shadow: inset 0 -4px 0 0 #6cf9f1;
+  background-color: #00ded0;
+}
+
+.theme-three .equals:hover {
+  box-shadow: inset 0 -4px 0 0 #6cf9f1;
+  background-color: #93fff8;
+}
+
+.theme-three .circle {
+  background-color: #93fff8;
 }
 
 @media screen and (min-width: 1440px) {
