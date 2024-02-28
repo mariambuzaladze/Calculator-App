@@ -14,35 +14,53 @@ const devision = document.getElementsByClassName("devision")[0];
 const mulpitly = document.getElementsByClassName("multiply")[0];
 const period = document.getElementsByClassName("period")[0];
 
-let position = "left";
+// localStorage.setItem("position", "left");
+function check() {
+  let position = localStorage.getItem("position");
+  if (position === "left") {
+    themeSwitch.style.justifyContent = "flex-start";
+  } else if (position === "middle") {
+    themeSwitch.style.justifyContent = "center";
+
+    body.classList.add("theme-two");
+  } else {
+    themeSwitch.style.justifyContent = "flex-end";
+
+    body.classList.remove("theme-two");
+    body.classList.add("theme-three");
+  }
+}
+
+check();
 
 circle.addEventListener("click", function () {
+  let position = localStorage.getItem("position");
   if (position === "left") {
     themeSwitch.style.justifyContent = "center";
 
     body.classList.add("theme-two");
 
-    position = "middle";
+    localStorage.setItem("position", "middle");
   } else if (position === "middle") {
     themeSwitch.style.justifyContent = "flex-end";
 
     body.classList.remove("theme-two");
     body.classList.add("theme-three");
 
-    position = "right";
+    localStorage.setItem("position", "right");
   } else {
     themeSwitch.style.justifyContent = "flex-start";
 
     body.classList.remove("theme-three");
 
-    position = "left";
+    localStorage.setItem("position", "left");
   }
 });
 
 for (let i = 0; i < numbers.length; i++) {
   numbers[i].addEventListener("click", function () {
     output.classList.add("active");
-    outputText.textContent += Number(numbers[i].textContent);
+    outputText.textContent += numbers[i].textContent;
   });
 }
 
@@ -54,48 +72,10 @@ reset.addEventListener("click", function () {
   outputText.textContent = "";
 });
 
-period.addEventListener("click", function () {
-  if (outputText.textContent !== "") {
-    outputText.textContent += ".";
-  }
-});
-
-plus.addEventListener("click", function () {
-  if (outputText.textContent !== "") {
-    outputText.textContent += "+";
-  }
-});
-
-minus.addEventListener("click", function () {
-  if (outputText.textContent !== "") {
-    outputText.textContent += "-";
-  }
-});
-
-devision.addEventListener("click", function () {
-  if (outputText.textContent !== "") {
-    outputText.textContent += "/";
-  }
-});
-
-mulpitly.addEventListener("click", function () {
-  if (outputText.textContent !== "") {
-    outputText.textContent += "x";
-  }
-});
-
 equals.addEventListener("click", function () {
-  if (outputText.textContent.includes("+")) {
-    let userNumbers = outputText.textContent.split("+");
-    outputText.textContent = Number(userNumbers[0]) + Number(userNumbers[1]);
-  } else if (outputText.textContent.includes("-")) {
-    let userNumbers = outputText.textContent.split("-");
-    outputText.textContent = Number(userNumbers[0]) - Number(userNumbers[1]);
-  } else if (outputText.textContent.includes("/")) {
-    let userNumbers = outputText.textContent.split("/");
-    outputText.textContent = Number(userNumbers[0]) / Number(userNumbers[1]);
-  } else if (outputText.textContent.includes("x")) {
-    let userNumbers = outputText.textContent.split("x");
-    outputText.textContent = Number(userNumbers[0]) * Number(userNumbers[1]);
+  if (!outputText.textContent.includes("x")) {
+    outputText.textContent = eval(outputText.textContent);
+  } else {
+    outputText.textContent = eval(outputText.textContent.replaceAll("x", "*"));
   }
 });
