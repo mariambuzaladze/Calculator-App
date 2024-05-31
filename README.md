@@ -27,3 +27,9 @@ This is a simple yet fully functional calculator app built using HTML, CSS, and 
 **CSS**: Styling to enhance the visual presentation.  
   
 **JavaScript**: Logic implementation for calculator operations and theme switching.  
+
+## Contact
+**Feel free to reach out if you have any questions or feedback:**
+
+**LinkedIn**: [https://www.linkedin.com/in/mariam-buzaladze-aa22b6297/]
+**Email**: mariambuzaladze10@gmail.com
